@@ -4,6 +4,8 @@ import java.util.concurrent.Callable;
 
 public class Order {
 
+  public static Order getNewOrder() { return new Order(); }
+
   public static Callable<String> fetchOrder() {
     return () -> "Fetching the order";
   }
