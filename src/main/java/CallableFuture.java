@@ -1,5 +1,3 @@
-package service;
-
 import model.Order;
 
 import java.util.concurrent.*;
