@@ -4,23 +4,23 @@ public class OrderWithString {
 
   public static Order getNewOrder() { return new Order(); }
 
-  public String fetchOrder() {
+  public static String fetchOrder() {
     return "Fetching the order";
   }
 
-  public String enrichOrder() {
+  public static String enrichOrder() {
     return "Enrich the order";
   }
 
-  public String payment() {
+  public static String payment() {
     return "Paying";
   }
 
-  public String dispatch() {
+  public static String dispatch() {
     return "Dispatching";
   }
 
-  public String sendEmail() {
+  public static String sendEmail() {
     return "Sending email";
   }
 }
