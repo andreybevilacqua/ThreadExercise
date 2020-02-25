@@ -1,5 +1,6 @@
 package service;
 
+import lombok.SneakyThrows;
 import model.Company;
 import model.Employee;
 import model.Employer;
@@ -17,33 +18,24 @@ public final class EmployerService {
 
   public static EmployerService getInstance(){return INSTANCE;}
 
+  @SneakyThrows
   public CompletableFuture<Employer> getEmployerDataCompletableFuture() {
-    try {
-      Thread.sleep(2000);
-      return completedFuture(createEmployer());
-    } catch (InterruptedException e) {
-      e.printStackTrace();
-    }
+    System.out.println("Thread of this process: " + Thread.currentThread());
+    Thread.sleep(2000);
     return completedFuture(createEmployer());
   }
 
+  @SneakyThrows
   public CompletableFuture<Company> getCompanyDataCompletableFuture() {
-    try {
-      Thread.sleep(4000);
-      return completedFuture(createCompany());
-    } catch (InterruptedException e) {
-      e.printStackTrace();
-    }
+    System.out.println("Thread of this process: " + Thread.currentThread());
+    Thread.sleep(4000);
     return completedFuture(createCompany());
   }
 
+  @SneakyThrows
   public CompletableFuture<Employee> getEmployeeDataCompletableFuture() {
-    try {
-      Thread.sleep(4000);
-      return completedFuture(createEmployee());
-    } catch (InterruptedException e) {
-      e.printStackTrace();
-    }
+    System.out.println("Thread of this process: " + Thread.currentThread());
+    Thread.sleep(4000);
     return completedFuture(createEmployee());
   }
 

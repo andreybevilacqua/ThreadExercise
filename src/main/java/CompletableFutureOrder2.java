@@ -6,6 +6,7 @@ public class CompletableFutureOrder2 {
 
   public static void main(String[] args) {
     System.out.println("Starting process...");
+    System.out.println("Thread of this process: " + Thread.currentThread());
     CompletableFuture
         .supplyAsync(() -> longNetworkProcess(3000)) // execute here my process in a separate async thread
         .thenAccept(integer -> System.out.println("The result is: " + integer));
