@@ -21,12 +21,14 @@ public class CompletableFutureOrder2 {
 
   @SneakyThrows
   static int longNetworkProcess(int value) {
+    System.out.println("Thread of the long net process: " + Thread.currentThread());
     Thread.sleep(value);
     return value * 10;
   }
 
   @SneakyThrows
   static void veryLongNetworkProcess(int value) {
+    System.out.println("Thread of the very long net process: " + Thread.currentThread());
     Thread.sleep(value);
     System.out.println("Finished the very long network process");
   }
