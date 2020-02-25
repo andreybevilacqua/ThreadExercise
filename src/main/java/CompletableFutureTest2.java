@@ -2,7 +2,7 @@ import lombok.SneakyThrows;
 
 import java.util.concurrent.CompletableFuture;
 
-public class CompletableFutureOrder2 {
+public class CompletableFutureTest2 {
 
   public static void main(String[] args) {
     System.out.println("Starting process...");
