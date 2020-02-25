@@ -39,33 +39,21 @@ public final class EmployerService {
     return completedFuture(createEmployee());
   }
 
+  @SneakyThrows
   public Employer getEmployerData() {
-    try {
-      Thread.sleep(2000);
-      return createEmployer();
-    } catch (InterruptedException e) {
-      e.printStackTrace();
-    }
+    Thread.sleep(2000);
     return createEmployer();
   }
 
+  @SneakyThrows
   public Company getCompanyData() {
-    try {
-      Thread.sleep(4000);
-      return createCompany();
-    } catch (InterruptedException e) {
-      e.printStackTrace();
-    }
+    Thread.sleep(4000);
     return createCompany();
   }
 
+  @SneakyThrows
   public Employee getEmployeeData() {
-    try {
-      Thread.sleep(4000);
-      return createEmployee();
-    } catch (InterruptedException e) {
-      e.printStackTrace();
-    }
+    Thread.sleep(4000);
     return createEmployee();
   }
 }
